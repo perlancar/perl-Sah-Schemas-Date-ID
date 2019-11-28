@@ -7,7 +7,7 @@ our $schema = [int => {
     summary => 'Month number',
     min => 1,
     max => 12,
-    'x.perl.coerce_rules' => ['str_convert_id_month_name_to_num'],
+    'x.perl.coerce_rules' => ['From_str::convert_id_month_name_to_num'],
 }, {}];
 
 1;

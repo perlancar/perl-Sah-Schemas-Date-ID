@@ -1,6 +1,8 @@
 package Sah::Schema::date::dow_num::id;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = [int => {
@@ -9,6 +11,13 @@ our $schema = [int => {
     max => 7,
     'x.perl.coerce_rules' => ['From_str::convert_id_dow_name_to_num'],
     'x.completion' => ['date_dow_num_id'],
+    examples => [
+        {value=>'', valid=>0},
+        {value=>0, valid=>0},
+        {value=>1, valid=>1},
+        {value=>7, valid=>1},
+        {value=>8, valid=>0},
+    ],
 }, {}];
 
 1;

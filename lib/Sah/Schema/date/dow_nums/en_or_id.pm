@@ -1,6 +1,8 @@
 package Sah::Schema::date::dow_nums::en_or_id;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = ['array' => {
@@ -8,6 +10,15 @@ our $schema = ['array' => {
     of => ['date::dow_num::en_or_id', {}, {}],
     'x.perl.coerce_rules' => ['From_str::comma_sep'],
     'x.completion' => ['date_dow_nums_en_or_id'],
+    examples => [
+        {value=>'', valid=>1, validated_value=>[]},
+        {value=>0, valid=>0},
+        {value=>1, valid=>1, validated_value=>[1]},
+        {value=>"1,7", valid=>1, validated_value=>[1,7]},
+        {value=>[1,7], valid=>1},
+        {value=>"1,7,8", valid=>0},
+        {value=>[1,7,8], valid=>0},
+    ],
 }, {}];
 
 1;

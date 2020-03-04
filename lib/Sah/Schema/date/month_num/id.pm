@@ -1,6 +1,8 @@
 package Sah::Schema::date::month_num::id;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = [int => {
@@ -8,6 +10,16 @@ our $schema = [int => {
     min => 1,
     max => 12,
     'x.perl.coerce_rules' => ['From_str::convert_id_month_name_to_num'],
+    examples => [
+        {value=>'', valid=>0},
+        {value=>'jan', valid=>1, validated_value=>1},
+        {value=>'AGU', valid=>1, validated_value=>8},
+        {value=>'aug', valid=>0},
+        {value=>0, valid=>0},
+        {value=>1, valid=>1},
+        {value=>12, valid=>1},
+        {value=>13, valid=>0},
+    ],
 }, {}];
 
 1;

@@ -1,6 +1,6 @@
 package Data::Sah::Coerce::perl::To_int::From_str::convert_en_or_id_month_name_to_num;
 
-# AUTHOR
+# AUTHORITY
 # DATE
 # DIST
 # VERSION

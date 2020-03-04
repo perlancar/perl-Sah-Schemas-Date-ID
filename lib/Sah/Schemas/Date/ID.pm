@@ -1,5 +1,10 @@
 package Sah::Schemas::Date::ID;
 
+# AUTHORITY
+# DATE
+# DIST
+# VERSION
+
 1;
 # ABSTRACT: Sah schemas related to date (Indonesian)
 

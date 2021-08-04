@@ -1,3 +1,12 @@
+0.006   2021-08-04  Released-By: PERLANCAR; Urgency: medium
+
+	- [schemas date::dow_nums::*][schemas date::month_nums::*] Make elements
+	  required (forbid undef elements), because that's what's expected most
+	  of the time.
+
+        - [ux] Add more examples, tweak Summary & Description.
+
+
 0.005   2020-03-08  Released-By: PERLANCAR; Urgency: medium
 
         - No functional changes.
